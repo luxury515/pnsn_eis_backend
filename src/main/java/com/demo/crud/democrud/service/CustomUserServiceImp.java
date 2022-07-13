@@ -30,21 +30,6 @@ public class CustomUserServiceImp implements UserDetailsService {
 
     return userRepository.findByUsername(username)
             .orElseThrow(() -> new UsernameNotFoundException("사용자를 찾을 수 없습니다."));
-
-//    User user = userRepository.findByUsername(username);
-//    if ("null".equals(user)) {
-//      throw new UsernameNotFoundException("not found user:" + username);
-//    }
-//
-//    CustomUser customUser = new CustomUser();
-//    customUser.setUsername(user.getUsername());
-//    customUser.setPassword(user.getPassword());
-//    customUser.setAuthorities(getAuthorities(username));
-//    customUser.setEnabled(true);
-//    customUser.setAccountNonExpired(true);
-//    customUser.setAccountNonLocked(true);
-//    customUser.setCredentialsNonExpired(true);
-//    return customUser;
   }
 
   public Collection<GrantedAuthority> getAuthorities(String username) {

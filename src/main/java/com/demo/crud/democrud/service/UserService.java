@@ -10,8 +10,7 @@ public interface UserService {
 
   List<User> findAll();
 
-  Optional<User> findById(String userId);
+  Optional<User> findById(Long userId);
 
-//  void deleteUser(User user);
-   void deleteUserById(String userId);
+
 }

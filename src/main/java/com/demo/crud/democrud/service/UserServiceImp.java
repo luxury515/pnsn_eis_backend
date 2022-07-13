@@ -24,14 +24,13 @@ public class UserServiceImp implements UserService {
   }
 
   @Override
-  public Optional<User> findById(String userId) {
+  public Optional<User> findById(Long userId) {
     return userRepository.findById(userId);
   }
 
-
-
-  @Override
-  public void deleteUserById(String userId) {
-    userRepository.deleteById(userId);
+  public void deleteUserById(Long userId){
+     userRepository.deleteById(userId);
   }
+
+
 }
