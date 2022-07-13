@@ -6,12 +6,12 @@ import java.util.List;
 import java.util.Optional;
 
 public interface UserService {
-User save(User user);
+  User save(User user);
 
-    List<User> findAll();
+  List<User> findAll();
 
-    Optional<User> findById(String userId);
+  Optional<User> findById(String userId);
 
-
-    void deleteUser(User user);
+//  void deleteUser(User user);
+   void deleteUserById(String userId);
 }
