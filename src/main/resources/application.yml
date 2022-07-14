@@ -6,7 +6,7 @@ spring:
     open-in-view: false # waring : spring.jpa.open-in-view is enabled by default.
   datasource:
     url: jdbc:mariadb://localhost:3306/pns_eis?serverTimezone=UTC&characterEncoding=UTF-8
-    driver-class-name: org.mariadb.jdbc.Driver #com.mysql.cj.jdbc.Driver #
+    driver-class-name: org.mariadb.jdbc.Driver #com.mysql.cj.jdbc.Driver 
     hikari:
       username: root
       password: root
