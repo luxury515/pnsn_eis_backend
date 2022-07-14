@@ -28,9 +28,8 @@ public class UserServiceImp implements UserService {
     return userRepository.findById(userId);
   }
 
-  public void deleteUserById(Long userId){
-     userRepository.deleteById(userId);
+  @Override
+  public void deleteUserById(Long userId) {
+    userRepository.deleteById(userId);
   }
-
-
 }

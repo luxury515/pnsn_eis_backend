@@ -14,7 +14,9 @@ import javax.persistence.Id;
 public class Salt {
   @Id @GeneratedValue private int id;
 
-  public Salt(String salt){this.salt = salt;}
-  private String salt;
+  public Salt(String salt) {
+    this.salt = salt;
+  }
 
+  private String salt;
 }

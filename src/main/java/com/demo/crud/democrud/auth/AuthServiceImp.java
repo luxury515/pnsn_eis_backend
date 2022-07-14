@@ -41,7 +41,7 @@ public class AuthServiceImp implements AuthService {
   @Override
   public String loginUser(User user) {
     Optional<User> o = userRepository.findByUsername(user.getUsername());
-    log.info("rolse:{}",o.get().getRoles());
+    log.info("rolse:{}", o.get().getRoles());
     if (o.isPresent()) {
       if (o.get()
           .getPassword()

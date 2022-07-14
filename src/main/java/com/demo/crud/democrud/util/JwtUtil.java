@@ -20,8 +20,10 @@ import java.util.function.Function;
 
 @Component
 public class JwtUtil {
-//  @Value("${spring.jwt.secret}")
-  private String SECRET_KEY = "MyNickNameisErjuerAndNameisMinsuMyNickNameisErjuerAndNameisMinsuMyNickNameisErjuerAndNameisMinsuMyNickNameisErjuerAndNameisMinsu";
+  //  @Value("${spring.jwt.secret}")
+  private String SECRET_KEY =
+      "MyNickNameisErjuerAndNameisMinsuMyNickNameisErjuerAndNameisMinsuMyNickNameisErjuerAndNameisMinsuMyNickNameisErjuerAndNameisMinsu";
+
   public String extractUsername(String token) {
     return extractClaim(token, Claims::getSubject);
   }
@@ -65,7 +67,7 @@ public class JwtUtil {
         .setIssuedAt(new Date(System.currentTimeMillis()))
         .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10))
         .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
-//            .signWith(getSigningKey(SECRET_KEY),SignatureAlgorithm.HS256)
+        //            .signWith(getSigningKey(SECRET_KEY),SignatureAlgorithm.HS256)
         .compact();
   }
 
